@@ -6,11 +6,11 @@
   "author": "Vinay Kumar",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vinaykamboj1325/project.git"
+    "url": "git+https://github.com/vinaykamboj1325/delivery-journey-3d.git"
   },
-  "homepage": "https://vinaykamboj1325.github.io/project/",
+  "homepage": "https://vinaykamboj1325.github.io/delivery-journey-3d/",
   "bugs": {
-    "url": "https://github.com/vinaykamboj1325/project/issues"
+    "url": "https://github.com/vinaykamboj1325/delivery-journey-3d/issues"
   },
   "type": "module",
   "private": true,
