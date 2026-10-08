@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "Interactive 3D order-delivery journey for React: pick a delivery type, pick a vehicle, drive the parcel station by station. Built on three.js and React Three Fiber.",
   "license": "MIT",
+  "author": "Vinay Kumar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinaykamboj1325/project.git"
+  },
+  "homepage": "https://vinaykamboj1325.github.io/project/",
+  "bugs": {
+    "url": "https://github.com/vinaykamboj1325/project/issues"
+  },
   "type": "module",
   "private": true,
   "main": "./dist/index.cjs",
