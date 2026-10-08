@@ -1,0 +1,11 @@
+/* Demo site chrome only; the component's own styles live in src/lib/styles.css */
+body { margin: 0; background: #f4f6fb; color: #2b2d42; font-family: 'Instrument Sans', system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) { body { background: #131a28; color: #eef2fa; } }
+.demo { max-width: 1140px; margin: 0 auto; padding: 24px 18px 48px; display: flex; flex-direction: column; gap: 18px; }
+.demo-head { display: flex; flex-direction: column; gap: 4px; }
+.demo-head h1 { font-family: 'Fredoka', 'Trebuchet MS', sans-serif; font-weight: 600; font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin: 0; line-height: 1.15; }
+.demo-eyebrow { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+.demo-nav { display: flex; flex-wrap: wrap; gap: 14px; font-size: .9rem; margin-top: 4px; }
+.demo-nav a { color: #1b6fd8; text-decoration: none; }
+.demo-nav a:hover { text-decoration: underline; }
+.demo-nav .demo-nav-strong { font-weight: 600; padding: 2px 10px; border: 1.5px solid #1b6fd8; border-radius: 999px; }

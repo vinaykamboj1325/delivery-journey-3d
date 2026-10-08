@@ -1,0 +1,34 @@
+# Deploys the demo + guide site to GitHub Pages on every push to main.
+# One-time setup: repo Settings → Pages → Source: "GitHub Actions".
+name: Deploy demo to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      # Pages serves from /<repo-name>/, so the demo is built with that base path.
+      - run: npm run build -- --base=/${{ github.event.repository.name }}/
+      # SPA fallback so /journey, /track/..., /docs load directly.
+      - run: cp dist-demo/index.html dist-demo/404.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-demo
+      - id: deployment
+        uses: actions/deploy-pages@v4
