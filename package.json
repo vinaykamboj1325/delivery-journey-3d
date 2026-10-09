@@ -2,33 +2,6 @@
   "name": "delivery-journey-3d",
   "version": "0.1.0",
   "description": "Interactive 3D order-delivery journey for React: pick a delivery type, pick a vehicle, drive the parcel station by station. Built on three.js and React Three Fiber.",
-  "license": "MIT",
-  "author": "Vinay Kumar",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vinaykamboj1325/delivery-journey-3d.git"
-  },
-  "homepage": "https://vinaykamboj1325.github.io/delivery-journey-3d/",
-  "bugs": {
-    "url": "https://github.com/vinaykamboj1325/delivery-journey-3d/issues"
-  },
-  "type": "module",
-  "private": true,
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./styles.css": "./dist/delivery-journey-3d.css"
-  },
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "keywords": [
     "react",
     "three",
@@ -39,6 +12,31 @@
     "order-tracking",
     "animation"
   ],
+  "homepage": "https://vinaykamboj1325.github.io/delivery-journey-3d/",
+  "bugs": {
+    "url": "https://github.com/vinaykamboj1325/delivery-journey-3d/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinaykamboj1325/delivery-journey-3d.git"
+  },
+  "license": "MIT",
+  "author": "Vinaykamboj1325",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/delivery-journey-3d.css"
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -46,14 +44,10 @@
     "typecheck": "tsc -b",
     "lint": "oxlint",
     "preview": "vite preview",
+    "docs:project": "node scripts/generate-project-md.mjs",
+    "docs:watch": "node scripts/generate-project-md.mjs --watch",
+    "docs:check": "node scripts/generate-project-md.mjs --check",
     "prepublishOnly": "npm run build:lib"
-  },
-  "peerDependencies": {
-    "@react-three/drei": ">=9",
-    "@react-three/fiber": ">=8",
-    "react": ">=18",
-    "react-dom": ">=18",
-    "three": ">=0.150"
   },
   "dependencies": {
     "zustand": "^5.0.15"
@@ -74,5 +68,13 @@
     "typescript": "~6.0.2",
     "vite": "^8.3.0",
     "vite-plugin-dts": "^5.1.2"
-  }
+  },
+  "peerDependencies": {
+    "@react-three/drei": ">=9",
+    "@react-three/fiber": ">=8",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "three": ">=0.150"
+  },
+  "module": "./dist/index.js"
 }

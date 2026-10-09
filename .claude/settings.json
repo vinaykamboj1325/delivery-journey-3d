@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR:-.}/scripts/generate-project-md.mjs\" --quiet 2>/dev/null || true",
+            "timeout": 30,
+            "statusMessage": "Updating PROJECT.md"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR:-.}/scripts/generate-project-md.mjs\" --quiet 2>/dev/null || true",
+            "timeout": 30,
+            "statusMessage": "Updating PROJECT.md"
+          }
+        ]
+      }
+    ]
+  }
+}
